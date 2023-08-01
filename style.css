@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #118AB2;   /* Primary color (118AB2) */
+    --secondary-color: #06D6A0; /* Secondary color (06D6A0) */
+    --page-background: #FFFFFF; /* White background */
+    --button-background: #FFFFFF; /* White button background */
+    --button-border: #EF476F;   /* Button border color (EF476F) */
+    --text-black: #333333;      /* Blackish grey text color */
+    --text-grey: #666666;       /* Grey text color */
+}
+
+/* Apply the custom colors to the elements */
+body {
+    background-color: var(--page-background);
+    font-family: 'Trebuchet MS', sans-serif; /* Trebuchet MS for body text */
+    margin: 0; /* Remove default margins */
+    padding: 20px; /* Add padding to the entire page */
+}
+
+h1, h2 {
+    font-family: 'Caveat Brush', cursive; /* Caveat Brush font for titles */
+    margin: 0; /* Remove default margins */
+}
+
+h1 {
+    color: var(--primary-color); /* Primary color (118AB2) */
+    font-size: 32px; /* Increased font size for the header */
+}
+
+header {
+    background-color: #FFFFFF; /* White header background */
+    color: var(--text-black); /* Blackish grey text color */
+    padding: 20px;
+    text-align: left; /* Left align the header */
+    border-radius: 10px; /* Rounded rectangle background */
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.nav-subtopics {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Right align the subtopics in the header */
+}
+
+.nav-subtopics li {
+    margin-left: 20px; /* Increase the margin between subtopics */
+    font-size: 20px; /* Increased font size for the subtopic titles */
+    display: block; /* Display the subtopics on separate lines */
+    opacity: 1; /* Set opacity to 1 to make them visible */
+    transform: translateX(0); /* Set transform to translateX(0) to make them visible */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effect */
+}
+
+.nav-subtopics li:last-child {
+    margin-right: 0;
+}
+
+.nav-subtopics li a {
+    color: var(--text-black); /* Blackish grey text color */
+    text-decoration: none;
+}
+
+.nav-subtopics li a:hover {
+    border-bottom: 2px solid var(--primary-color); /* Add a blue line below the subtopic on hover */
+}
+
+section {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px; /* Rounded rectangle background */
+    display: flex; /* Display sections as flex containers */
+    flex-direction: row; /* Align the content in a row */
+    align-items: center; /* Center align the content */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style buttons with custom colors */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    display: block;
+    margin-bottom: 10px; /* Add margin between buttons to place them on separate lines */
+}
+
+.section-button {
+    background-color: var(--button-background); /* White button background */
+    color: var(--text-black); /* Blackish grey text color */
+    border: none; /* Remove the border */
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.subtopic {
+    display: inline-block;
+    margin-right: 20px;
+    opacity: 0; /* Set opacity to 0 initially */
+    transform: translateX(-20px); /* Slide from left initially */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effect */
+    font-size: 24px; /* Increased font size for subtopic titles */
+    position: relative; /* Set position to relative to align the titles */
+}
+
+.subtopic p {
+    color: var(--text-grey); /* Grey text color */
+}
+
+/* Style titles to be bigger */
+h2 {
+    font-size: 24px;
+}
+
+/* Right-align the images and left-align the content */
+.section-content {
+    display: flex; /* Display the content as a flex container */
+    justify-content: space-between; /* Create space between text and image */
+    align-items: center; /* Center align the content */
+}
+
+.section-image {
+    flex: 0 0 200px; /* Adjust the image width as needed */
+    margin-left: 20px; /* Align the image to the right of the text */
+    order: 2; /* Change the order to make the image appear on the right */
+}
