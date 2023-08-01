@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+
+    <!-- Import Fonts from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Trebuchet+MS&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="path/to/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Custom Color Palette */
+        :root {
+            --primary-color: #118AB2;   /* Primary color (118AB2) */
+            --secondary-color: #06D6A0; /* Secondary color (06D6A0) */
+            --page-background: #FFFFFF; /* White background */
+            --button-background: #FFFFFF; /* White button background */
+            --button-border: #EF476F;   /* Button border color (EF476F) */
+            --text-black: #333333;      /* Blackish grey text color */
+            --text-grey: #666666;       /* Grey text color */
+        }
+
+        /* Apply the custom colors to the elements */
+        body {
+            background-color: var(--page-background);
+            font-family: 'Trebuchet MS', sans-serif; /* Trebuchet MS for body text */
+            margin: 0; /* Remove default margins */
+            padding: 20px; /* Add padding to the entire page */
+        }
+
+        h1, h2 {
+            font-family: 'Caveat Brush', cursive; /* Caveat Brush font for titles */
+            margin: 0; /* Remove default margins */
+        }
+
+        h1 {
+            color: var(--primary-color); /* Primary color (118AB2) */
+            font-size: 32px; /* Increased font size for the header */
+        }
+
+        header {
+            background-color: #FFFFFF; /* White header background */
+            color: var(--text-black); /* Blackish grey text color */
+            padding: 20px;
+            text-align: left; /* Left align the header */
+            border-radius: 10px; /* Rounded rectangle background */
+            margin-bottom: 20px; /* Add margin at the bottom */
+        }
+
+        .nav-subtopics {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* Right align the subtopics in the header */
+        }
+
+        .nav-subtopics li {
+            margin-left: 20px; /* Increase the margin between subtopics */
+            font-size: 20px; /* Increased font size for the subtopic titles */
+            display: block; /* Display the subtopics on separate lines */
+            opacity: 1; /* Set opacity to 1 to make them visible */
+            transform: translateX(0); /* Set transform to translateX(0) to make them visible */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effect */
+        }
+
+        .nav-subtopics li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-subtopics li a {
+            color: var(--text-black); /* Blackish grey text color */
+            text-decoration: none;
+        }
+
+        .nav-subtopics li a:hover {
+            border-bottom: 2px solid var(--primary-color); /* Add a blue line below the subtopic on hover */
+        }
+
+        section {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px; /* Rounded rectangle background */
+            display: flex; /* Display sections as flex containers */
+            flex-direction: row; /* Align the content in a row */
+            align-items: center; /* Center align the content */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style buttons with custom colors */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            display: block;
+            margin-bottom: 10px; /* Add margin between buttons to place them on separate lines */
+        }
+
+        .section-button {
+            background-color: var(--button-background); /* White button background */
+            color: var(--text-black); /* Blackish grey text color */
+            border: none; /* Remove the border */
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .subtopic {
+            display: inline-block;
+            margin-right: 20px;
+            opacity: 0; /* Set opacity to 0 initially */
+            transform: translateX(-20px); /* Slide from left initially */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effect */
+            font-size: 24px; /* Increased font size for subtopic titles */
+            position: relative; /* Set position to relative to align the titles */
+        }
+
+        .subtopic p {
+            color: var(--text-grey); /* Grey text color */
+        }
+
+        /* Style titles to be bigger */
+        h2 {
+            font-size: 24px;
+        }
+
+        /* Right-align the images and left-align the content */
+        .section-content {
+            display: flex; /* Display the content as a flex container */
+            justify-content: space-between; /* Create space between text and image */
+            align-items: center; /* Center align the content */
+        }
+
+        .section-image {
+            flex: 0 0 200px; /* Adjust the image width as needed */
+            margin-left: 20px; /* Align the image to the right of the text */
+            order: 2; /* Change the order to make the image appear on the right */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>My Personal Profile</h1>
+    <nav>
+        <ul class="nav-subtopics"> <!-- Right align subtopics in the header -->
+            <li class="nav-item subtopic">
+                <a href="#about">About</a>
+            </li>
+            <li class="nav-item subtopic">
+                <a href="#skills">Skills</a>
+            </li>
+            <li class="nav-item subtopic">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="nav-item subtopic">
+                <a href="#certifications">Certifications</a>
+            </li>
+            <li class="nav-item subtopic">
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- About Section -->
+<section id="about">
+    <div class="section-content">
+        <div>
+            <h2>About Me</h2>
+            <p>
+                Insert your introduction and personal details here. Write about your experiences, education, and any other relevant information.
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="https://drive.google.com/auth/drive/file/d/19MV88FCKwLGJYZ6EgaI5mFRpSqPyNCmu/uc?usp=drive_link" alt="About Image">
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <div class="section-content">
+        <div>
+            <h2>Skills</h2>
+            <ul>
+                <li class="section-button">Skill 1</li>
+                <li class="section-button">Skill 2</li>
+                <li class="section-button">Skill 3</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </div>
+        <div class="section-image">
+            <img src="skills_image.jpg" alt="Skills Image">
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="section-content">
+        <div>
+            <h2>Projects</h2>
+            <ul>
+                <a href = "slime.html"><li class="section-button">Slime mold based pathfinder</li></a>
+                <a href = "blender.html"><li class="section-button">Simulations and animations project using blender</li></a>
+                <a href = "dino.html"><li class="section-button">Chrome dino AI</li></a>
+                <!-- Add more projects as needed -->
+            </ul>
+        </div>
+        <div class="section-image">
+            <img src="projects_image.jpg" alt="Projects Image">
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications">
+    <div class="section-content">
+        <div>
+            <h2>Certifications</h2>
+            <ul>
+                <li class="section-button">Certification 1</li>
+                <li class="section-button">Certification 2</li>
+                <li class="section-button">Certification 3</li>
+                <!-- Add more certifications as needed -->
+            </ul>
+        </div>
+        <div class="section-image">
+            <img src="certifications_image.jpg" alt="Certifications Image">
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="section-content">
+        <div>
+            <h2>Contact</h2>
+            <p>
+                You can provide your contact information here, such as email, phone number, or social media links.
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="contact_image.jpg" alt="Contact Image">
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS (Optional if you use Bootstrap components) -->
+<script src="path/to/bootstrap.min.js"></script>
+
+<script>
+    // Function to check if an element is in the viewport
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle scrolling and apply the cascading effect to subtopics
+    function handleScroll() {
+        const subtopics = document.querySelectorAll('.subtopic');
+        subtopics.forEach((subtopic) => {
+            if (isElementInViewport(subtopic)) {
+                subtopic.style.opacity = 1;
+                subtopic.style.transform = 'translateX(0)';
+            }
+        });
+    }
+
+    // Add an event listener to the scroll event
+    window.addEventListener('scroll', handleScroll);
+
+    function scrollToSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
+    // Display the header when the webpage loads
+    window.addEventListener('load', () => {
+        header.style.display = 'block';
+    });
+</script>
+</body>
+</html>
